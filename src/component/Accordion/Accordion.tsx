@@ -11,7 +11,7 @@ const Accordion = (props:PropsTypeAccordion) => {
 
     return (
         <div>
-            <TitleAccordion title={"Title"} setCollapsed={setCollaps} collaps={collaps}/>
+            <TitleAccordion title={"Title"} setCollapsed={setCollaps} collaps={collaps} onClick={()=>setCollaps(!collaps)}/>
             {!collaps&&<BodyAccordion />}
         </div>
     );
