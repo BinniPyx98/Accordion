@@ -1,14 +1,22 @@
 import React from "react";
 
+type AccordionItems={
+    title:string
+    id:number
+}
 
+type PropsType={
+    items:AccordionItems[]
+}
+export const BodyAccordion:React.FC<PropsType>=({items})=>{
 
-export const BodyAccordion=()=>{
+    const mapItems=items.map(item=> <div key={item.id}>{item.title}</div>)
+
     return(
         <div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
+
+            {mapItems}
+
         </div>
     )
 }
